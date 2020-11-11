@@ -1,0 +1,12 @@
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\bin\Debug\netcoreapp3.1\Emp.Data.deps.json
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\bin\Debug\netcoreapp3.1\Emp.Data.dll
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\obj\Debug\netcoreapp3.1\Emp.Data.csprojAssemblyReference.cache
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\obj\Debug\netcoreapp3.1\Emp.Data.AssemblyInfoInputs.cache
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\obj\Debug\netcoreapp3.1\Emp.Data.AssemblyInfo.cs
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\bin\Debug\netcoreapp3.1\Emp.Data.runtimeconfig.json
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\bin\Debug\netcoreapp3.1\Emp.Data.runtimeconfig.dev.json
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\obj\Debug\netcoreapp3.1\Emp.Data.genruntimeconfig.cache
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\bin\Debug\netcoreapp3.1\Emp.Data.pdb
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\obj\Debug\netcoreapp3.1\Emp.Data.csproj.CoreCompileInputs.cache
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\obj\Debug\netcoreapp3.1\Emp.Data.dll
+C:\Users\Mahmoud\source\repos\JWTProject\Emp.Data\obj\Debug\netcoreapp3.1\Emp.Data.pdb

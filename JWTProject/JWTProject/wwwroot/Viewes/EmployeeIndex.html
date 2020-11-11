@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="../CS/bootstrap.css" rel="stylesheet" />
+    <script src="../js/jquery-3.3.1.js"></script>
+</head>
+<body>
+
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Salary</th>
+                <th>Department</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <script>
+
+        $(document).ready(function () {
+            ShowAllEmployee();
+
+            function ShowAllEmployee() {
+                $("table tbody").html("");
+                $.ajax({
+                    url: "https://localhost:44390/api/Employee/GetEmployees",
+                    type: "get",
+                    contentType: "application/json",
+                    success: function (result, status, xhr) {
+                        $.each(result, function (index, value) {
+                            $("tbody").append($("<tr>"));
+                            appendElement = $("tbody tr").last();
+                            appendElement.append($("<td>").html(value["id"]));
+                            appendElement.append($("<td>").html(value["name"]));
+                            appendElement.append($("<td>").html(value["salary"]));
+                            appendElement.append($("<td>").html(value["departmentId"]));
+                            appendElement.append($("<td>").html("<a href=\"UpdateReservation.html?id=" + value["id"] + "\"></a>";
+                            appendElement.append($("<td>").html("<img class=\"delete\" src=\"icon/close.png\" />"));
+                        });
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(xhr)
+                    }
+                });
+            }
+
+            $("table").on("click", "img.delete", function () {
+                var reservationId = $(this).parents("tr").find("td:nth-child(1)").text();
+
+                $.ajax({
+                    url: "https://localhost:44390/api/Employee/Delete/" + reservationId,
+                    type: "delete",
+                    contentType: "application/json",
+                    success: function (result, status, xhr) {
+                        ShowAllEmployee();
+                    },
+                    error: function (xhr, status, error) {
+                        console.log(xhr)
+                    }
+                });
+            });
+
+        });
+    </script>
+</body>
+
+
+</html>

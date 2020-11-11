@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Project</title>
+    <link href="CS/bootstrap.css" rel="stylesheet" />
+    <link href="CS/cs.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 class="card-title text-center text-primary">Employee Table</h1>
+    <form id="addForm" action="javascript:void(0);" method="POST" onsubmit="addItem()">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Name</label>
+                    <input type="text" id="Name" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label class="control-label">Salary</label>
+                    <input type="text" id="Salary" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-3">
+                <input type="submit" value="Add" class="btn btn-primary">
+            </div>
+        </div>
+    </form>
+
+    <div id="editForm" class="disabled">
+        <form action="javascript:void(0);" onsubmit="updateItem()">
+            <input type="hidden" id="edit-id">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Name</label>
+                        <input type="text" id="edit-name" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label class="control-label">Salary</label>
+                        <input type="text" id="edit-salary" class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <input type="submit" value="Edit" class="btn btn-primary">
+                    <a onclick="closeInput()" aria-label="Close" class="btn btn-success text-white">&#10006;</a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-md-1"></div>
+        <table class="table col-md-10">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Salary</th>
+                    <th></th>
+                    <th><a onclick="addForm()" class="btn btn-primary">Add New Employee</a></th>
+                </tr>
+            </thead>
+            <tbody id="todos" class="table-hover"></tbody>
+        </table>
+        <div class="col-md-1"></div>
+
+    </div>   
+    
+
+    <p id="counter"></p>
+
+    <div class="loaderbody" id="loaderbody">
+        <div class="loader"></div>
+    </div>
+
+
+    <script src="js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        document.getElementById('editForm').style.display = 'none';
+        document.getElementById('addForm').style.display = 'none';
+        function addForm() {
+            document.getElementById('addForm').style.display = 'block';
+            document.getElementById('editForm').style.display = 'none';
+        }
+        getItems()
+    </script>
+
+</body>
+</html>
